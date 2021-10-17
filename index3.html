@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Booking System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Note: Try to remove the following lines to see the effect of CSS positioning */
+        
+        .affix {
+            top: 0;
+            width: 100%;
+            z-index: 9999 !important;
+        }
+        
+        .affix+.container-fluid {
+            padding-top: 70px;
+        }
+        /* The heart of the matter */
+        
+        .horizontal-scrollable>.row {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        
+        .horizontal-scrollable>.row>.col-xs-4 {
+            display: inline-block;
+            float: none;
+        }
+        /* Decorations */
+        /*
+        .col-xs-4 {
+            color: white;
+            font-size: 24px;
+            padding-bottom: 20px;
+            padding-top: 18px;
+        }
+        
+        .col-xs-4:nth-child(2n+1) {
+            background: green;
+        }
+        
+        .col-xs-4:nth-child(2n+2) {
+            background: black;
+        } */
+        /* Remove the jumbotron's default bottom margin */
+        
+        .jumbotron {
+            margin-bottom: 0;
+        }
+        /* Add a gray background color and some padding to the footer */
+        
+        footer {
+            background-color: #f2f2f2;
+            padding: 25px;
+        }
+        
+        .carousel-inner img {
+            width: 100%;
+            /* Set width to 100% */
+            min-height: 200px;
+        }
+        /* Hide the carousel text when the screen is less than 600 pixels wide */
+        
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container text-center">
+            <h1>One Stop Tour Guide</h1>
+            <p>One stop tourism guide in the mountain kingdom guide</p>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid" id="home">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" data-spy="affix" data-offset-top="197">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                    <li><a href="destinations.html"><span class="glyphicon glyphicon-map-marker"></span> Attractions</a></li>
+                    <li><a href="#contacts"><span class="glyphicon glyphicon-phone-alt"></span> Contacts</a></li>
+                    <li><a href="#about"><span class="glyphicon glyphicon-plane"></span> Transport</a></li>
+                    <li><a href="#about"><span class="glyphicon glyphicon-bed"></span> Stays</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                    <li><a href="loginPage.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Get Inspired</h1>
+        <div class="row">
+            <div class="col-sm-8">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                            <img src="victoria.jpg" alt="Image">
+                            <div class="carousel-caption">
+                                <h3>Victoria Hotel</h3>
+                                <p>Bliss</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="avaniL.jpg" alt="Image">
+                            <div class="carousel-caption">
+                                <h3>Avani Lesotho</h3>
+                                <p>Maseru</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="maliba.jpg" alt="Image">
+                            <div class="carousel-caption">
+                                <h3>Maliba Lodge</h3>
+                                <p>In lesotho</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="avaniM.jpg" alt="Image">
+                            <div class="carousel-caption">
+                                <h3>Avani Maseru</h3>
+                                <p>Maseru</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <img src="mount.jpg" alt="Image">
+                            <div class="carousel-caption">
+                                <h3>Mount Maluti Hotel</h3>
+                                <p>Mzuku</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="well">
+
+                    <!-- Search form -->
+                    <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="well">
+                        <p>Districts</p>
+                        <select class="select" data-mdb-filter="true">
+                        <option value="1">All Districts</option>
+                        <option value="2">Maseru</option>
+                        <option value="3">Mafeteng</option>
+                        <option value="4">Leribe</option>
+                        <option value="5">Mohale's Hoek</option>
+                        <option value="6">Quthing</option>
+                        <option value="7">Qacha's Nek</option>
+                        <option value="8">Mokhotlong</option>
+                        <option value="9">Thaba Tseka</option>
+                        <option value="10">Berea</option>
+                        <option value="11">Butha Buthe</option>
+                      </select>
+                    </div>
+
+                    <div class="well">
+                        <p>What are you looking for?</p>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Tourism</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Book Accomodations</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Tour Guides</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Travel Tickects</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Chaveurs</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Travel Insurance</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Job Listing</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Crowd Funding</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Resturants</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Cultural Events</label>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="">Camping</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Marketing</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Visa Applications</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Sporting Activities</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Events</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Review Score</label>
+                        </div>
+                        <div class="checkbox disabled">
+                            <label><input type="checkbox" value="">Places Of Interest</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+            <div class="container text-center">
+                <h3>Specials</h3>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                        <p>Special 1</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                        <p>Xmas Lunch</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="well">
+                            <p>Some text..</p>
+                        </div>
+                        <div class="well">
+                            <p>Some text..</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="well">
+                            <p>Some text..</p>
+                        </div>
+                        <div class="well">
+                            <p>Some text..</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+
+
+
+            <div class="container">
+                <h2>Destinations</h2>
+
+                <ul class="nav nav-tabs">
+                    <li class="active"><a data-toggle="tab" href="#hom">Places Of Interest</a></li>
+                    <li><a data-toggle="tab" href="#menu1">Hotels & BnB's</a></li>
+                    <li><a data-toggle="tab" href="#menu2">Districts</a></li>
+                    <li><a data-toggle="tab" href="#menu3">Regions</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="hom" class="tab-pane fade in active">
+                        <h3>Places of Interest:</h3>
+                        <p>Lists places of interest</p>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <h3>Stays</h3>
+                        <p>Lists hotels and bnb's</p>
+                    </div>
+                    <div id="menu2" class="tab-pane fade">
+                        <h3>Districts</h3>
+                        <p>Lists Districts and their places of interest, venues</p>
+                    </div>
+                    <div id="menu3" class="tab-pane fade">
+                        <h3>Regions</h3>
+                        <p>Lists regions and their places of interest</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="container text-center">
+                <h3>Discover all tourist destinations</h3>
+                <br>
+                <div class="row">
+                    <div class="col-sm-2">
+                        <a href="#">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Hotel 1</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Hotel 2</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Hotel 3</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Hotel 4</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Hotel 5</p>
+                        </a>
+                    </div>
+                    <div class="col-sm-2">
+                        <a href="#">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Hotel 6</p>
+                        </a>
+                    </div>
+                    <div class="container text-right">
+                        <ul class="pagination">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">More Places</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div><br>
+
+            <center>
+                <div class="container">
+
+                    <h1 style="text-align:center;color:green;">
+                        Our Services
+                    </h1>
+                    <h3>
+                        Scroll through to view our range of services.
+                    </h3>
+                    <div class="container horizontal-scrollable">
+                        <div class="row text-center">
+                            <div class="col-xs-4">
+                                <a href="#">
+                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                    <p><strong>Service 1</strong></p>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="#">
+                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                    <p><strong>Service 2</strong></p>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="#">
+                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                    <p><strong>Service 3</strong></p>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="#">
+                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                    <p><strong>Service 4</strong></p>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a>
+                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                    <p><strong>Service 5</strong></p>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a>
+                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                    <p><strong>Service 6</strong></p>
+                                </a>
+                            </div>
+                            <div class="col-xs-4">
+                                <a href="#">
+                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                    <p><strong>Service 7</strong></p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+            <footer class="container-fluid text-center">
+                <h3 id="contacts"> Contacts</h3>
+                <p>Email: </p>
+                <p>Facebook: </p>
+                <p>Twitter: </p>
+                <p>Instagram: </p>
+                <p>Whatsapp: </p>
+                <p>Mobile:</p>
+
+                <p>
+                    <a href="#">Regions</a> <a href="#">Districts</a> <a href="#">Airports</a> <a href="#">Hotels</a>
+                    <a href="#">Places of interest</a> <a href="#">Homes</a> <a href="#">Apartments</a> <a>Villas Hostels</a>
+                    <a href="#">B&Bs</a> <a href="#">Chaveurs </a> <a href="#">Travel Documents</a>
+                    <a href="#"></a><a href="#">Guest houses</a> <a href="#">Unique places to stay</a>
+                    <a href="#">Reviews Unpacked:</a> <a href="#">Travel articles</a>
+                    <a href="#">Travel Communities</a> <a href="#">Seasonal and holiday deals</a>
+                    <a href="#">Car hire</a> <a href="#">Visa Application</a> <a href="#">Restaurant</a>
+                    <a href="#">reservations</a> <a href="#">Book for Travel Agents</a>
+                    <a href="#">Coronavirus (COVID-19)</a> <a href="#">About</a> <a href="#">Contact Customer Service</a> <a href="#">Partners</a>
+                    <a href="#">help</a> <a href="#">Tour Guides</a> <a href="#">Careers</a>
+                    <a href="#">Terms & Conditions</a> <a href="#">Privacy & Cookie Statement</a>
+                </p>
+
+                <h3 id="about">About</h3>
+                <p>Your one stop Lesotho tourism guide. Get all tourism Lesotho here. What we do is offer: Tourism Book Accomodations Tour Guides Travel Tickects Chaveurs Travel Insurance Job Listing Crowd Funding Resturants Cultural Events Camping Marketing
+                    Visa Applications Sporting Activities Events Review Score Places Of Interest
+                </p>
+            </footer>
+
+</body>
+
+</html>
