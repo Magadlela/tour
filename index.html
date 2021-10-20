@@ -5,9 +5,15 @@
     <title>Booking System</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js">
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
         /* Note: Try to remove the following lines to see the effect of CSS positioning */
         
@@ -71,6 +77,77 @@
                 display: none;
             }
         }
+        
+        .footer {
+            padding: 60px 0;
+            width: 100%;
+            background: #9d8bb6;
+            color: #fff;
+        }
+        
+        .footer-title {
+            position: relative;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 600;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-title:after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 4px;
+            background: #ff304d;
+        }
+        
+        .footer-links a {
+            padding: 10px 0;
+            color: #fff;
+            display: block;
+            transition: color 0.5s ease-in-out;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            color: #ff304d;
+        }
+        
+        .footer-social-links li {
+            display: inline-block;
+        }
+        
+        .footer-social-links a {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+            float: left;
+            margin-right: 10px;
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            color: #fff;
+            line-height: 1;
+            -webkit-transition: background 0.3s ease-in-out;
+            -moz-transition: background 0.3s ease-in-out;
+            transition: background 0.3s ease-in-out;
+            background: #a48cc5;
+        }
+        
+        .footer-social-links a:hover {
+            background: #ff304d;
+        }
+        
+        .footer-bottom {
+            width: 100%;
+            padding: 25px 0;
+            text-align: center;
+            color: #fff;
+            background: rgb(168, 178, 196);
+        }
     </style>
 </head>
 
@@ -78,7 +155,7 @@
     <div class="jumbotron">
         <div class="container text-center">
             <h1>One Stop Tour Guide</h1>
-            <p>One stop tourism guide in the mountain kingdom guide</p>
+            <p>One stop tourism guide in the mountain kingdom</p>
         </div>
     </div>
 
@@ -94,10 +171,10 @@
             <div class="collapse navbar-collapse" id="myNavbar" data-spy="affix" data-offset-top="197">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#home"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    <li><a href="destinations.html"><span class="glyphicon glyphicon-map-marker"></span> Attractions</a></li>
+                    <li><a href="attractions.html"><span class="glyphicon glyphicon-map-marker"></span> Attractions</a></li>
                     <li><a href="#contacts"><span class="glyphicon glyphicon-phone-alt"></span> Contacts</a></li>
-                    <li><a href="#about"><span class="glyphicon glyphicon-plane"></span> Transport</a></li>
-                    <li><a href="#about"><span class="glyphicon glyphicon-bed"></span> Stays</a></li>
+                    <li><a href="transport.html"><span class="glyphicon glyphicon-plane"></span> Transport</a></li>
+                    <li><a href="stays.html"><span class="glyphicon glyphicon-bed"></span> Stays</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -218,7 +295,7 @@
                             <label><input type="checkbox" value="">Tour Guides</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Travel Tickects</label>
+                            <label><input type="checkbox" value="">Plane Tickects</label>
                         </div>
                         <div class="checkbox">
                             <label><input type="checkbox" value="">Chaveurs</label>
@@ -239,7 +316,7 @@
                             <label><input type="checkbox" value="">Cultural Events</label>
                         </div>
                         <div class="checkbox">
-                            <label><input type="checkbox" value="">Camping</label>
+                            <label><input type="checkbox" value="">Camping & Hiking</label>
                         </div>
                         <div class="checkbox disabled">
                             <label><input type="checkbox" value="">Marketing</label>
@@ -444,6 +521,8 @@
                     </div>
                 </div>
             </center>
+
+            <!--
             <footer class="container-fluid text-center">
                 <h3 id="contacts"> Contacts</h3>
                 <p>Email: </p>
@@ -472,7 +551,102 @@
                     Visa Applications Sporting Activities Events Review Score Places Of Interest
                 </p>
             </footer>
-
+-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1> ...</h1>
+                        <footer class="footer">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-3 m-b-30">
+                                        <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                            About us
+                                        </div>
+                                        <p class="white-text">
+                                            Lorem Ipsum.
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3 m-b-30">
+                                        <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                            Latest themes
+                                        </div>
+                                        <div class="footer-links">
+                                            <a href="#">  
+Appointment  
+</a>
+                                            <a href="#">  
+Health center  
+</a>
+                                            <a href="#">  
+Quality  
+</a>
+                                            <a href="#">  
+Wallstreet  
+</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 m-b-30">
+                                        <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                            Quick Links
+                                        </div>
+                                        <div class="footer-links">
+                                            <a href="#">  
+Blog  
+</a>
+                                            <a href="#">  
+FAQ  
+</a>
+                                            <a href="#">  
+Terms & conditions  
+</a>
+                                            <a href="#">  
+Privacy policy  
+</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 m-b-30">
+                                        <div class="footer-title m-t-5 m-b-20 p-b-8">
+                                            Support
+                                        </div>
+                                        <div class="footer-links">
+                                            <a href="#">  
+Affiliate  
+</a>
+                                            <a href="#">  
+Login  
+</a>
+                                            <a href="#">  
+All theme package  
+</a>
+                                            <a href="#">  
+Support forum  
+</a>
+                                        </div>
+                                        <div class="footer-social-links m-t-30">
+                                            <li id="contacts">
+                                                <a href="#">
+                                                    <i class="fa fa-facebook" aria-hidden="true"> </i> </a>
+                                                <a href="#"> <i class="fa fa-twitter" aria-hidden="true"> </i> </a>
+                                                <a href="#"> <i class="fa fa-linkedin" aria-hidden="true"> </i> </a>
+                                                <a href="#"> <i class="fa fa-youtube" aria-hidden="true"> </i> </a>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                        <div class="footer-bottom">
+                            Copyright © 2021, All Rights Reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js">
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+            </script>
+            <script src="https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
+            </script>
 </body>
-
 </html>
