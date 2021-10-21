@@ -148,6 +148,68 @@
             color: #fff;
             background: rgb(168, 178, 196);
         }
+        
+        .img-hover-zoom {
+            height: 200px;
+            /* [1.1] Set it as per your need */
+            overflow: hidden;
+            /* [1.2] Hide the overflowing of child elements */
+        }
+        /* [2] Transition property for smooth transformation of images */
+        
+        .img-hover-zoom img {
+            transition: transform .1s ease;
+        }
+        /* [3] Finally, transforming the image when container gets hovered */
+        
+        .img-hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+        
+        .navbar {
+            margin-bottom: 0;
+            background-color: #302a2a;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+        
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+        
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #000000 !important;
+            background-color: #fff !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+        
+        div.desc {
+            /*  background-color: rgb(199, 192, 192);
+            */
+            bottom: 0;
+            color: rgb(255, 255, 255);
+            left: 0;
+            /*opacity: 0.5;
+            */
+            position: absolute;
+            width: 100%;
+        }
+        
+        .fix {
+            width: 100%;
+            padding: 0px;
+        }
     </style>
 </head>
 
@@ -345,13 +407,17 @@
                 <h3>Specials</h3>
                 <br>
                 <div class="row">
-                    <div class="col-sm-3">
-                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                        <p>Special 1</p>
+                    <div class="col-sm-3 img-hover-zoom">
+                        <a href="service.html">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Special 1</p>
+                        </a>
                     </div>
-                    <div class="col-sm-3">
-                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                        <p>Xmas Lunch</p>
+                    <div class="col-sm-3 img-hover-zoom">
+                        <a href="service.html">
+                            <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                            <p>Special 2</p>
+                        </a>
                     </div>
                     <div class="col-sm-3">
                         <div class="well">
@@ -411,55 +477,55 @@
                 <h3>Discover all tourist destinations</h3>
                 <br>
                 <div class="row">
-                    <div class="col-sm-2">
-                        <a href="#">
+                    <div class="col-sm-2 img-hover-zoom">
+                        <a href="service.html">
                             <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
                             <p>Hotel 1</p>
                         </a>
                     </div>
-                    <div class="col-sm-2">
-                        <a href="#">
+                    <div class="col-sm-2 img-hover-zoom">
+                        <a href="service.html">
                             <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
                             <p>Hotel 2</p>
                         </a>
                     </div>
-                    <div class="col-sm-2">
-                        <a href="#">
+                    <div class="col-sm-2 img-hover-zoom">
+                        <a href="service.html">
                             <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
                             <p>Hotel 3</p>
                         </a>
                     </div>
-                    <div class="col-sm-2">
-                        <a href="#">
+                    <div class="col-sm-2 img-hover-zoom">
+                        <a href="service.html">
                             <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
                             <p>Hotel 4</p>
                         </a>
                     </div>
-                    <div class="col-sm-2">
-                        <a href="#">
+                    <div class="col-sm-2 img-hover-zoom">
+                        <a href="service.html">
                             <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
                             <p>Hotel 5</p>
                         </a>
                     </div>
-                    <div class="col-sm-2">
-                        <a href="#">
+                    <div class="col-sm-2 img-hover-zoom">
+                        <a href="service.html">
                             <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
                             <p>Hotel 6</p>
                         </a>
-                    </div>
-                    <div class="container text-right">
-                        <ul class="pagination">
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li><a href="#">7</a></li>
-                            <li><a href="#">8</a></li>
-                            <li><a href="#">9</a></li>
-                            <li><a href="#">More Places</a></li>
-                        </ul>
+                        <div class="container text-right">
+                            <ul class="pagination">
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">More Places</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div><br>
@@ -475,46 +541,74 @@
                     </h3>
                     <div class="container horizontal-scrollable">
                         <div class="row text-center">
-                            <div class="col-xs-4">
-                                <a href="#">
-                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                                    <p><strong>Service 1</strong></p>
+                            <div class="col-xs-4 img-hover-zoom wrapper">
+                                <a href="service.html">
+                                    <div class="fix">
+                                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                        <div class="desc">
+                                            <p class="desc_content"><strong>Service 1</strong></p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="col-xs-4">
-                                <a href="#">
-                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                                    <p><strong>Service 2</strong></p>
+                            <div class="col-xs-4 img-hover-zoom wrapper">
+                                <a href="service.html">
+                                    <div class="fix">
+                                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                        <div class="desc">
+                                            <p class="desc_content"><strong>Service 2</strong></p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="col-xs-4">
-                                <a href="#">
-                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                                    <p><strong>Service 3</strong></p>
+                            <div class="col-xs-4 img-hover-zoom wrapper">
+                                <a href="service.html">
+                                    <div class="fix">
+                                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                        <div class="desc">
+                                            <p class="desc_content"><strong>Service 3</strong></p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="col-xs-4">
-                                <a href="#">
-                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                                    <p><strong>Service 4</strong></p>
+                            <div class="col-xs-4 img-hover-zoom wrapper">
+                                <a href="service.html">
+                                    <div class="fix">
+                                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                        <div class="desc">
+                                            <p class="desc_content"><strong>Service 4</strong></p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="col-xs-4">
+                            <div class="col-xs-4 img-hover-zoom wrapper">
                                 <a>
-                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                                    <p><strong>Service 5</strong></p>
+                                    <div class="fix">
+                                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                        <div class="desc">
+                                            <p class="desc_content"><strong>Service 5</strong></p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="col-xs-4">
-                                <a>
-                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                                    <p><strong>Service 6</strong></p>
+                            <div class="col-xs-4 img-hover-zoom wrapper">
+                                <a href="service.html">
+                                    <div class="fix">
+                                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                        <div class="desc">
+                                            <p class="desc_content"><strong>Service 6</strong></p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
-                            <div class="col-xs-4">
-                                <a href="#">
-                                    <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
-                                    <p><strong>Service 7</strong></p>
+                            <div class="col-xs-4 img-hover-zoom wrapper">
+                                <a href="service.html">
+                                    <div class="fix">
+                                        <img src="victoria.jpg" class="img-responsive" style="width:100%" alt="Image">
+                                        <div class="desc">
+                                            <p class="desc_content"><strong>Service 7</strong></p>
+                                        </div>
+                                    </div>
                                 </a>
                             </div>
                         </div>
@@ -564,26 +658,18 @@
                                             About us
                                         </div>
                                         <p class="white-text">
-                                            Lorem Ipsum.
+                                            More
                                         </p>
                                     </div>
                                     <div class="col-md-3 m-b-30">
                                         <div class="footer-title m-t-5 m-b-20 p-b-8">
-                                            Latest themes
+                                            Latest
                                         </div>
                                         <div class="footer-links">
-                                            <a href="#">  
-Appointment  
-</a>
-                                            <a href="#">  
-Health center  
-</a>
-                                            <a href="#">  
-Quality  
-</a>
-                                            <a href="#">  
-Wallstreet  
-</a>
+                                            <a href="#">Appointment  </a>
+                                            <a href="#">Health center  </a>
+                                            <a href="#">Quality  </a>
+                                            <a href="#">Wallstreet  </a>
                                         </div>
                                     </div>
                                     <div class="col-md-3 m-b-30">
@@ -591,18 +677,10 @@ Wallstreet
                                             Quick Links
                                         </div>
                                         <div class="footer-links">
-                                            <a href="#">  
-Blog  
-</a>
-                                            <a href="#">  
-FAQ  
-</a>
-                                            <a href="#">  
-Terms & conditions  
-</a>
-                                            <a href="#">  
-Privacy policy  
-</a>
+                                            <a href="#">Blog  </a>
+                                            <a href="#">FAQ  </a>
+                                            <a href="#">Terms & conditions  </a>
+                                            <a href="#">Privacy policy  </a>
                                         </div>
                                     </div>
                                     <div class="col-md-3 m-b-30">
@@ -610,18 +688,10 @@ Privacy policy
                                             Support
                                         </div>
                                         <div class="footer-links">
-                                            <a href="#">  
-Affiliate  
-</a>
-                                            <a href="#">  
-Login  
-</a>
-                                            <a href="#">  
-All theme package  
-</a>
-                                            <a href="#">  
-Support forum  
-</a>
+                                            <a href="#">Affiliate  </a>
+                                            <a href="loginPage.html">Login  </a>
+                                            <a href="#">All theme package  </a>
+                                            <a href="#">Support forum  </a>
                                         </div>
                                         <div class="footer-social-links m-t-30">
                                             <li id="contacts">
@@ -648,5 +718,7 @@ Support forum
             </script>
             <script src="https://maxcdn.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
             </script>
+
 </body>
+
 </html>
